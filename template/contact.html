@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title%} contact us{% endblock title%} 
+
+{% block body%} 
+<div class="container-fluid my-3 px-0">
+    <img src="/static/image/ice.jpeg" class="d-block w-100" alt="...">
+    </div>
+<div class="container">
+    <h1 class="text-center">Conatct Us</h1>
+<form method="post" action="/contacts">
+    {% csrf_token %}
+    <div class="mb-3">
+
+        <div class="input-group mb-3">
+       
+            <input type="text" name="name" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+<div>
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input required type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+
+      <div class="pt-2">
+        <!-- <label for="exampleFormControlInput1" class="form-control pt-5">Enter Phone Number</label> -->
+       Enter number<input class="form-control" type="number" name="num">
+      </div>
+      
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+        <textarea class="form-control" name="desc" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+
+      <div class="col-12">
+        <button type="submit" name="save" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+     </form>
+</div>
+
+{% endblock body%}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title%} service{% endblock title%} 
+
+{% block body%}  
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem consequuntur cum dolore magni ipsa officiis nisi maxime, blanditiis et, facere numquam hic sapiente natus perferendis, placeat unde a suscipit ex dolor praesentium commodi. Ipsa fugit ipsam voluptatibus, magni, temporibus rerum suscipit quibusdam nemo id facilis quisquam ad quod reprehenderit? Nisi, at sequi quaerat modi beatae enim esse deleniti harum iusto nobis unde error alias, quas cumque debitis quidem deserunt est quis temporibus nam voluptatem magni. Quia, perspiciatis illum iure modi molestias, laboriosam nulla eaque vitae distinctio, recusandae minima sint ex consectetur odit numquam nostrum perferendis! Error cumque expedita repellendus ut.</p>
+<form action="/services" method="post" >
+    {% csrf_token %}
+Enter Type of blood: <input type="text" name="a"> <br> <br>
+Enter your Mood:<input type="text" name="b">
+
+<div class="col-12">
+    <button type="submit" name="save" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+
+{% endblock body%}
